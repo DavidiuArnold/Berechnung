@@ -130,7 +130,7 @@ int main() {
 
     // Eingabe des COM-Ports durch Anwender
     std::string comPort;
-    std::cout << "Bitte geben sie den COM-Port an, mit dem der Arduino verbunden ist. zb. COM3: Um zu pruefen welcher Port dies ist,\n"
+    std::cout << "Bitte geben sie den COM-Port an, mit dem der Arduino verbunden ist. zb. COM3 Um zu pruefen welcher Port dies ist,\n"
         << "oeffnen sie bitte den Geraete Manager und suchen sie unter Anschluessen Arduino\n";
     std::getline(std::cin, comPort);  // Eingabe des COM-Ports
 
