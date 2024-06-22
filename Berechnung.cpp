@@ -115,8 +115,9 @@ void startBatchFile(const std::string& comPort) {
 
     // Überprüfen, ob der Aufruf erfolgreich war
     if (result != 0) {
-        std::cerr << "Fehler beim Ausführen der Batch-Datei!" << std::endl;
-        exit(1); 
+        std::cerr << "Vergewissern sie sich bitte, ob sie den richtigen COM-Port angegeben haben" << std::endl;
+        std::cin.get();
+        //exit(1); 
     }
 }
 // Hauptfunktion
