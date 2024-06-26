@@ -60,8 +60,7 @@ void configureSerialPort(HANDLE& hSerial) {
 
     // Wendet die Konfiguration des seriellen Ports an und überprüft auf Fehler.
     if (!SetCommState(hSerial, &dcbSerialParams)) {
-        std::cerr << "Error setting state: " << GetLastError() << std::endl;
-        exit(1);
+        std::cerr << "Error setting state: " << GetLastError() << std::endl;  
     }
 }
 
@@ -115,9 +114,9 @@ void startBatchFile(const std::string& comPort) {
 
     // Überprüfen, ob der Aufruf erfolgreich war
     if (result != 0) {
-        std::cerr << "Vergewissern sie sich bitte, ob sie den richtigen COM-Port angegeben haben" << std::endl;
+        std::cerr << "Vergewissern sie sich bitte, ob sie den richtigen COM-Port angegeben haben oder der Arduino angeschlossen ist" << std::endl;
         std::cin.get();
-        //exit(1); 
+        exit(1); 
     }
 }
 // Hauptfunktion
